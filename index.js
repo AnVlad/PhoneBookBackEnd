@@ -17,7 +17,7 @@ app.use(morgan(':method :url :status :res[content-length] :response-time :data')
 //
 
 app.get('/info', (request, response) => {
-  const quantity = number.find({}).then((data) => {
+  number.find({}).then((data) => {
     response.send(`<p>Phonebook has info for ${data.length} people</p>
     <p>${new Date()}</p>
     `);
